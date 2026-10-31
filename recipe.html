@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Recipe Finder</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><span></span></span>
+      <span>Healthy Recipe Finder</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a class="active" href="#recipes">Recipes</a>
+    </nav>
+
+    <a class="header-button" href="#recipes">Browse recipes</a>
+  </header>
+
+  <main id="home">
+    <section class="intro" id="about">
+      <h1>Explore our simple, healthy recipes</h1>
+      <p>
+        Discover eight quick, whole-food dishes that fit real-life schedules and taste<br class="desktop-break">
+        amazing. Use the search bar to find a recipe by name or ingredient, or simply scroll<br class="desktop-break">
+        the list and let something delicious catch your eye.
+      </p>
+    </section>
+
+    <section class="recipe-section" id="recipes">
+      <div class="toolbar">
+        <div class="filters">
+          <label class="select-wrap">
+            <select id="prep-filter" aria-label="Maximum preparation time">
+              <option value="all">Max Prep Time</option>
+              <option value="5">5 minutes or less</option>
+              <option value="10">10 minutes or less</option>
+            </select>
+            <span class="chevron"></span>
+          </label>
+
+          <label class="select-wrap">
+            <select id="cook-filter" aria-label="Maximum cooking time">
+              <option value="all">Max Cook Time</option>
+              <option value="0">No cooking</option>
+              <option value="10">10 minutes or less</option>
+              <option value="15">15 minutes or less</option>
+            </select>
+            <span class="chevron"></span>
+          </label>
+        </div>
+
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 4.5 4.5"></path>
+          </svg>
+          <input id="recipe-search" type="search"
+            placeholder="Search by name or ingredient..."
+            aria-label="Search recipes">
+        </label>
+      </div>
+
+      <div class="recipe-grid" id="recipe-grid">
+
+        <article class="recipe-card"
+          data-name="Mediterranean Chickpea Salad"
+          data-ingredients="chickpea tomato cucumber parsley lemon olive oil"
+          data-prep="10" data-cook="0">
+          <img src="recipes/chickpea-salad.jpg"
+            alt="Fresh Mediterranean salad">
+          <div class="card-content">
+            <h2>Mediterranean Chickpea Salad</h2>
+            <p class="description">A refreshing, protein-packed salad tossed in a lemon-olive oil dressing.</p>
+            <div class="meta">
+              <span><b>♟</b> Servings: 2</span>
+              <span><b>◴</b> Prep: 10 mins</span>
+            </div>
+            <div class="meta cook"><span><b>♨</b> Cook: 0 min</span></div>
+            <button class="view-recipe" data-recipe="Mediterranean Chickpea Salad">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="recipe-card"
+          data-name="Avocado & Tomato Wholegrain Toast"
+          data-ingredients="avocado tomato wholegrain bread lemon"
+          data-prep="5" data-cook="5">
+          <img src="recipes/avocado-toast.jpg"
+            alt="Avocado and tomato toast">
+          <div class="card-content">
+            <h2>Avocado &amp; Tomato Wholegrain Toast</h2>
+            <p class="description">Creamy avocado spread over toasted wholegrain bread, topped with juicy tomatoes.</p>
+            <div class="meta">
+              <span><b>♟</b> Servings: 1</span>
+              <span><b>◴</b> Prep: 5 mins</span>
+            </div>
+            <div class="meta cook"><span><b>♨</b> Cook: 5 mins</span></div>
+            <button class="view-recipe" data-recipe="Avocado & Tomato Wholegrain Toast">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="recipe-card"
+          data-name="One-Pan Lemon Garlic Salmon with Asparagus"
+          data-ingredients="salmon lemon garlic asparagus olive oil"
+          data-prep="5" data-cook="12">
+          <img src="recipes/salmon.jpg"
+            alt="Salmon with lemon and vegetables">
+          <div class="card-content">
+            <h2>One-Pan Lemon Garlic Salmon with...</h2>
+            <p class="description">A 15-minute weeknight dinner of flaky salmon and tender asparagus.</p>
+            <div class="meta">
+              <span><b>♟</b> Servings: 2</span>
+              <span><b>◴</b> Prep: 5 mins</span>
+            </div>
+            <div class="meta cook"><span><b>♨</b> Cook: 12 mins</span></div>
+            <button class="view-recipe" data-recipe="One-Pan Lemon Garlic Salmon with Asparagus">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="recipe-card"
+          data-name="Quinoa Veggie Power Bowl"
+          data-ingredients="quinoa sweet potato spinach chickpea avocado lemon"
+          data-prep="10" data-cook="15">
+          <img src="recipes/quinoa-bowl.jpg"
+            alt="Healthy quinoa vegetable bowl">
+          <div class="card-content">
+            <h2>Quinoa Veggie Power Bowl</h2>
+            <p class="description">A balanced bowl of fluffy quinoa, roasted veggies and healthy fats.</p>
+            <div class="meta">
+              <span><b>♟</b> Servings: 2</span>
+              <span><b>◴</b> Prep: 10 mins</span>
+            </div>
+            <div class="meta cook"><span><b>♨</b> Cook: 15 mins</span></div>
+            <button class="view-recipe" data-recipe="Quinoa Veggie Power Bowl">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="recipe-card"
+          data-name="Sweet Potato Black Bean Tacos"
+          data-ingredients="sweet potato black beans tomato tortilla lime cilantro"
+          data-prep="10" data-cook="15">
+          <img src="recipes/tacos.jpg"
+            alt="Black bean and vegetable tacos">
+          <div class="card-content">
+            <h2>Sweet Potato Black Bean Tacos</h2>
+            <p class="description">Smoky roasted sweet potatoes and black beans tucked into warm tortillas.</p>
+            <div class="meta">
+              <span><b>♟</b> Servings: 3</span>
+              <span><b>◴</b> Prep: 10 mins</span>
+            </div>
+            <div class="meta cook"><span><b>♨</b> Cook: 15 mins</span></div>
+            <button class="view-recipe" data-recipe="Sweet Potato Black Bean Tacos">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="recipe-card"
+          data-name="Greek Yogurt Berry Parfait"
+          data-ingredients="greek yogurt raspberry blueberry strawberry oats honey"
+          data-prep="5" data-cook="0">
+          <img src="recipes/parfait.jpg"
+            alt="Greek yogurt and berry parfait">
+          <div class="card-content">
+            <h2>Greek Yogurt Berry Parfait</h2>
+            <p class="description">Layers of creamy Greek yogurt, fresh berries and crunchy oats for a high-protein snack.</p>
+            <div class="meta">
+              <span><b>♟</b> Servings: 1</span>
+              <span><b>◴</b> Prep: 5 mins</span>
+            </div>
+            <div class="meta cook"><span><b>♨</b> Cook: 0 min</span></div>
+            <button class="view-recipe" data-recipe="Greek Yogurt Berry Parfait">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="recipe-card"
+          data-name="Lentil & Spinach Soup"
+          data-ingredients="lentil spinach tomato onion garlic vegetable broth"
+          data-prep="10" data-cook="20">
+          <img src="recipes/lentil-soup.jpg"
+            alt="Lentil soup with vegetables">
+          <div class="card-content">
+            <h2>Lentil &amp; Spinach Soup</h2>
+            <p class="description">A hearty 30-minute soup rich in plant protein and iron.</p>
+            <div class="meta">
+              <span><b>♟</b> Servings: 4</span>
+              <span><b>◴</b> Prep: 10 mins</span>
+            </div>
+            <div class="meta cook"><span><b>♨</b> Cook: 20 mins</span></div>
+            <button class="view-recipe" data-recipe="Lentil & Spinach Soup">View Recipe</button>
+          </div>
+        </article>
+
+        <article class="recipe-card"
+          data-name="Banana Oat Pancakes"
+          data-ingredients="banana oats egg berries honey"
+          data-prep="5" data-cook="10">
+          <img src="recipes/pancakes.jpg"
+            alt="Banana oat pancakes topped with berries">
+          <div class="card-content">
+            <h2>Banana Oat Pancakes</h2>
+            <p class="description">Flour-free pancakes sweetened naturally with ripe bananas.</p>
+            <div class="meta">
+              <span><b>♟</b> Servings: 2</span>
+              <span><b>◴</b> Prep: 5 mins</span>
+            </div>
+            <div class="meta cook"><span><b>♨</b> Cook: 10 mins</span></div>
+            <button class="view-recipe" data-recipe="Banana Oat Pancakes">View Recipe</button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="empty-state" id="empty-state" hidden>
+        No recipes match your search. Try another ingredient or time.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with ❤️ and 🥑</p>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="Bluesky">🦋</a>
+      <a href="#" aria-label="TikTok">♪</a>
+    </div>
+  </footer>
+
+  <dialog class="recipe-dialog" id="recipe-dialog">
+    <button class="dialog-close" id="dialog-close" aria-label="Close recipe">×</button>
+    <p class="eyebrow">HEALTHY RECIPE</p>
+    <h2 id="dialog-title">Recipe name</h2>
+    <p id="dialog-copy"></p>
+    <h3>Quick method</h3>
+    <p>Prepare the ingredients, combine or cook them as needed, season to taste, and serve fresh.</p>
+  </dialog>
+
+  <script>
+    const searchInput = document.querySelector("#recipe-search");
+    const prepFilter = document.querySelector("#prep-filter");
+    const cookFilter = document.querySelector("#cook-filter");
+    const cards = [...document.querySelectorAll(".recipe-card")];
+    const emptyState = document.querySelector("#empty-state");
+
+    function filterRecipes() {
+      const query = searchInput.value.trim().toLowerCase();
+      const maxPrep = prepFilter.value === "all"
+        ? Infinity : Number(prepFilter.value);
+      const maxCook = cookFilter.value === "all"
+        ? Infinity : Number(cookFilter.value);
+
+      let visible = 0;
+
+      cards.forEach(card => {
+        const searchable =
+          `${card.dataset.name} ${card.dataset.ingredients}`.toLowerCase();
+
+        const matches =
+          searchable.includes(query) &&
+          Number(card.dataset.prep) <= maxPrep &&
+          Number(card.dataset.cook) <= maxCook;
+
+        card.hidden = !matches;
+        if (matches) visible++;
+      });
+
+      emptyState.hidden = visible !== 0;
+    }
+
+    searchInput.addEventListener("input", filterRecipes);
+    prepFilter.addEventListener("change", filterRecipes);
+    cookFilter.addEventListener("change", filterRecipes);
+
+    const dialog = document.querySelector("#recipe-dialog");
+    const dialogTitle = document.querySelector("#dialog-title");
+    const dialogCopy = document.querySelector("#dialog-copy");
+
+    document.querySelectorAll(".view-recipe").forEach(button => {
+      button.addEventListener("click", () => {
+        const card = button.closest(".recipe-card");
+        dialogTitle.textContent = button.dataset.recipe;
+        dialogCopy.textContent =
+          card.querySelector(".description").textContent;
+        dialog.showModal();
+      });
+    });
+
+    document.querySelector("#dialog-close").addEventListener("click", () => {
+      dialog.close();
+    });
+
+    dialog.addEventListener("click", event => {
+      if (event.target === dialog) dialog.close();
+    });
+  </script>
+
+</body>
+</html>
